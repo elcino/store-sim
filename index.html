@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>App Store Preview</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Oxygen, Ubuntu, sans-serif;
+      background-color: #f2f2f2;
+      color: #1c1c1e;
+    }
+
+    .app-header {
+      background-color: white;
+      display: flex;
+      padding: 16px;
+      gap: 16px;
+      align-items: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .app-icon {
+      width: 135px;
+      height: 135px;
+      border-radius: 34px;
+      flex-shrink: 0;
+    }
+
+    .app-info {
+      flex: 1;
+    }
+
+    .app-name {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 0;
+      margin-bottom: 6px;
+    }
+
+    .app-category {
+      font-size: 13px;
+      color: #636366;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+   .publisher-name {
+      font-size: 13px;
+      color: #0070c9;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+    .get-button {
+      background-color: #007aff;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      padding: 8px 24px;
+      border-radius: 16px;
+      cursor: pointer;
+    }
+
+    .scroll-area {
+      background-color: white;
+      padding: 16px;
+      height: calc(100vh - 112px);
+      overflow-y: auto;
+    }
+
+    .section-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #3c3c43;
+    }
+
+    .screenshots {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 8px 0 16px;
+    }
+
+    .screenshot {
+      flex: 0 0 auto;
+      width: 180px; /* responsive ve oranlı görüntü */
+      height: calc(180px * 2.167); /* 1290/2796 oranı = ~0.461 */
+      border-radius: 16px;
+      background-color: #d8d8d8;
+      overflow: hidden;
+    }
+
+    .screenshot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+    }
+
+    /* Scrollbar görünümünü biraz incelt */
+    .scroll-area::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    .scroll-area::-webkit-scrollbar-thumb {
+      background-color: rgba(0,0,0,0.2);
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-header">
+    <img src="https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/30/49/ba/3049ba26-f2c4-669b-8308-fa41486f884c/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/246x0w.webp" alt="App Icon" class="app-icon">
+    <div class="app-info">
+      <p class="app-name">Match Villains</p>
+      <p class="app-category">Big Heists & Match 3 Puzzles</p>
+      <p class="publisher-name">Good Job Games</p>
+
+    <div style="display: flex; align-items: center; gap: 1px; margin-bottom: 12px;">
+      <span style="font-size: 12px; color: #ffcc00;">★</span>
+      <span style="font-size: 12px; color: #ffcc00;">★</span>
+      <span style="font-size: 12px; color: #ffcc00;">★</span>
+      <span style="font-size: 12px; color: #ffcc00;">★</span>
+      <span style="font-size: 12px; color: #ccc;">★</span>
+      <span style="font-size: 12px; color: #6e6e73;">4.5 346 Ratings</span>
+    </div>
+
+      <button class="get-button">Get</button>
+    </div>
+  </div>
+
+  <div class="scroll-area">
+
+
+<div class="section-title">Screenshots</div>
+<div class="screenshots">
+  <div class="screenshot">
+    <img src="img/S5_1290x2796_posterS1.jpg" alt="Screenshot 1" style="width: 100%; height: 100%; border-radius: 16px;">
+  </div>
+  <div class="screenshot">
+    <img src="img/S5_1290x2796_posterS2.jpg" alt="Screenshot 2" style="width: 100%; height: 100%; border-radius: 16px;">
+  </div>
+  <div class="screenshot">
+    <img src="img/S5_1290x2796_posterS3.jpg" alt="Screenshot 3" style="width: 100%; height: 100%; border-radius: 16px;">
+  </div>
+  <div class="screenshot">
+    <img src="img/S5_1290x2796_posterS4.jpg" alt="Screenshot 4" style="width: 100%; height: 100%; border-radius: 16px;">
+  </div>
+  <div class="screenshot">
+    <img src="img/S5_1290x2796_posterS5.jpg" alt="Screenshot 5" style="width: 100%; height: 100%; border-radius: 16px;">
+  </div>
+  <div class="screenshot">
+    <img src="img/S5_1290x2796_posterS6.jpg" alt="Screenshot 6" style="width: 100%; height: 100%; border-radius: 16px;">
+  </div>
+</div>
+
+    <div class="section-title">Description</div>
+    <p class="description">
+      Dive into the exciting world of "Match Villains" and join our unusual family of aristocratic thieves on a thrilling adventure to gather a collection of the world's most precious artifacts.
+
+Break through layers of obstacles with clever matches and unleash powerful combos in a game where every level is a new heist!
+    </p>
+
+
+<!-- Modal -->
+<div id="modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background-color:rgba(0,0,0,0.9); z-index:999; align-items:center; justify-content:center;">
+  <img id="modal-img" src="" style="max-width:90%; max-height:90%; border-radius:20px;" />
+</div>
+
+<script>
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modal-img');
+
+  document.querySelectorAll('.screenshot img').forEach(img => {
+    img.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = img.src;
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    modalImg.src = '';
+  });
+</script>
+
+
+
+</body>
+</html>
